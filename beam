@@ -322,7 +322,7 @@ def getMultipartEncoder(filePath):
   return MultipartEncoder({
     "file": (
       os.path.basename(filePath),
-      open(filePath, "r"),
+      open(filePath, "rb"),
       getMimeTypeForFile(filePath)
     )
   })
